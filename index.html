@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GS Studio Design Consultants</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- NAV -->
+<header>
+    <div class="logo">GS STUDIO</div>
+    <div class="menu-toggle" onclick="toggleMenu()">Menu</div>
+</header>
+
+<nav id="menu">
+    <a href="#about">About</a>
+    <a href="#architecture">Architecture</a>
+    <a href="#interiors">Interiors</a>
+    <a href="#landscape">Landscapes</a>
+    <a href="#highlights">Highlights</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <video autoplay muted loop>
+        <source src="assets/videos/bg.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-text">
+        <h1>GS STUDIO</h1>
+        <p>Design. Architecture. Interiors.</p>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="fade">
+    <h2>About Us</h2>
+    <p>We create timeless architecture and refined spaces through modern design principles and luxury aesthetics.</p>
+</section>
+
+<!-- ARCHITECTURE -->
+<section id="architecture" class="split fade">
+    <div class="text">
+        <h2>Architecture</h2>
+        <p>Bold structures designed with precision and purpose.</p>
+    </div>
+    <div class="image" style="background-image:url('assets/images/arch.jpg')"></div>
+</section>
+
+<!-- INTERIORS -->
+<section id="interiors" class="split reverse fade">
+    <div class="image" style="background-image:url('assets/images/interior.jpg')"></div>
+    <div class="text">
+        <h2>Interiors</h2>
+        <p>Luxury interiors crafted with detail and elegance.</p>
+    </div>
+</section>
+
+<!-- LANDSCAPE -->
+<section id="landscape" class="split fade">
+    <div class="text">
+        <h2>Landscapes</h2>
+        <p>Nature integrated into design with harmony.</p>
+    </div>
+    <div class="image" style="background-image:url('assets/images/landscape.jpg')"></div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section id="highlights" class="fade center">
+    <h2>Highlights</h2>
+    <div class="stats">
+        <div><h3>100+</h3><p>Projects</p></div>
+        <div><h3>10+</h3><p>Years</p></div>
+        <div><h3>50+</h3><p>Clients</p></div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="fade center">
+    <h2>Contact</h2>
+    <input type="text" placeholder="Name">
+    <input type="email" placeholder="Email">
+    <textarea placeholder="Message"></textarea>
+    <button>Send</button>
+</section>
+
+<footer>
+    © 2026 GS Studio Design Consultants
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
