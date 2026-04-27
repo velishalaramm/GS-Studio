@@ -3,7 +3,7 @@
 :root {
   --bg-color: #0a0a0a;
   --text-primary: #ffffff;
-  --text-secondary: #a0a0a0;
+  --text-secondary: #e0e0e0;
   --accent-color: #d4af37; /* Gold */
   --border-color: rgba(255, 255, 255, 0.1);
   --glass-bg: rgba(10, 10, 10, 0.7);
@@ -179,6 +179,8 @@ a {
   display: flex;
   height: 100vh;
   width: 100%;
+  gap: 20px;
+  background-color: var(--bg-color);
 }
 
 .tile {
@@ -403,6 +405,12 @@ a {
 .team-content {
   max-width: 1200px;
   width: 100%;
+}
+
+.team-heading {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .team-grid {
@@ -630,6 +638,7 @@ a {
 /* Responsive */
 @media (max-width: 768px) {
   .heading { font-size: 3rem; }
+  .team-heading { font-size: 2.5rem; }
   .split-section { flex-direction: column; }
   .menu-inner { flex-direction: column; gap: 3rem; padding: 6rem 5%; }
   .menu-link { font-size: 2rem; }
