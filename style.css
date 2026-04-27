@@ -662,7 +662,25 @@ a {
 @media (max-width: 768px) {
   .heading { font-size: 3rem; }
   .team-heading { font-size: 2.5rem; }
-  .split-section { flex-direction: column; }
+  .split-section { 
+    flex-direction: column; 
+    height: auto;
+    padding: 5rem 5%;
+    gap: 2rem;
+  }
+  .tile {
+    width: 100%;
+    height: 40vh;
+    max-width: none;
+  }
+  .tile-left, .tile-right {
+    transform: none;
+  }
+  .tile-content {
+    width: 85%;
+    padding: 20px;
+    bottom: 10%;
+  }
   .menu-inner { flex-direction: column; gap: 3rem; padding: 6rem 5%; }
   .menu-link { font-size: 2rem; }
   .header { padding: 1.5rem 5%; }
