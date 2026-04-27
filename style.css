@@ -455,6 +455,136 @@ a {
   letter-spacing: 1px;
 }
 
+/* Contact Section */
+.contact-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  padding: 6rem 10%;
+}
+
+.contact-container {
+  display: flex;
+  width: 100%;
+  max-width: 1400px;
+  gap: 4rem;
+  background-color: #000;
+}
+
+.contact-content {
+  flex: 1;
+  color: #fff;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.contact-line {
+  border: none;
+  border-bottom: 2px solid #333;
+  width: 250px;
+  margin-bottom: 2rem;
+}
+
+.contact-intro {
+  color: #a0a0a0;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.contact-item {
+  margin-bottom: 1.5rem;
+}
+
+.contact-subtitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.vertical-line {
+  color: #fff;
+  font-weight: 700;
+}
+
+.contact-details {
+  color: #a0a0a0;
+  font-size: 1rem;
+  line-height: 1.8;
+  padding-left: 1.5rem;
+}
+
+.contact-list {
+  list-style: none;
+  padding-left: 1.5rem;
+}
+
+.contact-list li {
+  color: #a0a0a0;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-list i {
+  color: #fff;
+  width: 20px;
+  text-align: center;
+}
+
+.social-icons-contact {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-left: 1.5rem;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #333;
+  color: #fff;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.social-btn:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  transform: translateY(-3px);
+}
+
+.contact-map {
+  flex: 1;
+  min-height: 500px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+@media (max-width: 992px) {
+  .contact-container {
+    flex-direction: column;
+  }
+  .contact-map {
+    min-height: 400px;
+  }
+}
+
 /* Footer */
 .footer {
   padding: 4rem 10%;
