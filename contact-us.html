@@ -7,9 +7,212 @@
   <title>GS Studio Design Consultants | Contact Us</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
+  <style>
+    /* Clarity Arts Style Contact Layout */
+    .contact-page {
+      background-color: #000;
+      color: #fff;
+    }
+
+    .l-standard-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 150px 5% 100px;
+    }
+
+    .b-contact-panel {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 5rem;
+    }
+
+    .b-contact-panel__details {
+      flex: 0 0 40%;
+      padding-right: 4rem;
+    }
+
+    .b-contact-panel__map-container {
+      flex: 0 0 60%;
+    }
+
+    .e-heading-1 {
+      font-size: 4rem;
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .b-contact-panel__intro {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: #b0b0b0;
+      margin-bottom: 4rem;
+      font-weight: 300;
+    }
+
+    .b-contact-panel__info-block {
+      margin-bottom: 3rem;
+    }
+
+    .b-contact-panel__heading {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      color: var(--accent-color, #d4af37);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .b-contact-panel__info {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #a0a0a0;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .b-contact-panel__social {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #a0a0a0;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .b-contact-panel__info a, .b-contact-panel__social-link {
+      color: #a0a0a0;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+
+    .b-contact-panel__social-link {
+      font-size: 1.5rem;
+    }
+
+    .b-contact-panel__info a:hover, .b-contact-panel__social-link:hover {
+      color: #fff;
+    }
+
+    .b-contact-panel__map {
+      width: 100%;
+      height: 600px;
+      border: none;
+    }
+
+    .l-contact-form {
+      max-width: 900px;
+    }
+
+    .e-intro-paragraph {
+      font-size: 1.8rem;
+      line-height: 1.6;
+      color: #fff;
+      font-weight: 300;
+      margin-bottom: 3rem;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .contact-action-btns {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .e-btn-submit {
+      background: transparent;
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 1.2rem 3rem;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .e-btn-submit:hover {
+      background: #fff;
+      color: #000;
+      border-color: #fff;
+    }
+
+    @media (max-width: 992px) {
+      .b-contact-panel__details {
+        flex: 0 0 100%;
+        padding-right: 0;
+        margin-bottom: 3rem;
+      }
+      .b-contact-panel__map-container {
+        flex: 0 0 100%;
+      }
+      .b-contact-panel__map {
+        height: 400px;
+      }
+      .e-heading-1 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+      }
+      .e-intro-paragraph {
+        font-size: 1.4rem;
+      }
+      .contact-action-btns {
+        flex-direction: column;
+      }
+    }
+
+    /* Modals Dark Styling */
+    .modal-content {
+      background: #111;
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .modal-header {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .modal-header .btn-close {
+      filter: invert(1);
+    }
+    .modal-body input, .modal-body textarea, .modal-body select {
+      background: #222;
+      border: 1px solid #333;
+      color: #fff;
+      width: 100%;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    .modal-body input:focus, .modal-body textarea:focus {
+      outline: none;
+      border-color: var(--accent-color, #d4af37);
+    }
+    .modal-body button[type="submit"] {
+      background: var(--accent-color, #d4af37);
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      width: 100%;
+      font-weight: 500;
+      margin-top: 10px;
+      transition: opacity 0.3s ease;
+    }
+    .modal-body button[type="submit"]:hover {
+      opacity: 0.9;
+    }
+  </style>
 </head>
 
-<body>
+<body class="contact-page">
 
   <header class="header">
     <a href="index.html" class="logo">GS Studio</a>
@@ -30,8 +233,6 @@
           <li><a href="index.html#our-work" class="menu-link">Our Work</a></li>
           <li><a href="index.html#history" class="menu-link">History</a></li>
           <li><a href="index.html#team" class="menu-link">Team</a></li>
-          <li><a href="#" class="menu-link">Work With Us</a></li>
-          <li><a href="#" class="menu-link">Partners</a></li>
           <li><a href="contact-us.html" class="menu-link active">Contact Us</a></li>
         </ul>
       </nav>
@@ -46,7 +247,7 @@
         </div>
         <div class="info-block">
           <h6>Contact.</h6>
-          <p><a href="tel:+123456789">+1 234 567 89</a><br><a href="mailto:hello@gsstudio.com">hello@gsstudio.com</a></p>
+          <p><a href="tel:+918121009079">+91 81210 09079</a><br><a href="mailto:gsstudiodesignconsultants@gmail.com">gsstudiodesignconsultants@gmail.com</a></p>
         </div>
         <div class="info-block">
           <h6>Social.</h6>
@@ -60,47 +261,76 @@
     </div>
   </div>
 
-  <main style="padding-top: 100px;">
-    <!-- Contact Us Section -->
-    <section class="contact-section" id="contact" style="min-height: calc(100vh - 100px); padding-top: 2rem;">
-      <div class="contact-container">
-        <div class="contact-content">
-          <h2 class="contact-title">Contact Us</h2>
-          <hr class="contact-line">
-          <p class="contact-intro">We'd love to hear from you! Please fill out the form or send us a detailed message directly. Your feedback is important to us, and we look forward to hearing from you!</p>
-          
-          <div class="contact-item">
-            <h3 class="contact-subtitle"><span class="vertical-line">|</span> Enquiry</h3>
-          </div>
-          <div class="contact-item">
-            <h3 class="contact-subtitle"><span class="vertical-line">|</span> Career</h3>
-          </div>
-          <div class="contact-item">
-            <h3 class="contact-subtitle"><span class="vertical-line">|</span> Location</h3>
-            <p class="contact-details">3f-04, It Heights, Main Road, opposite Delhi Public School, Madhura Nagar Colony, Gachibowli, Khajaguda, Hyderabad, Telangana 500032.</p>
-          </div>
-          <div class="contact-item">
-            <h3 class="contact-subtitle"><span class="vertical-line">|</span> Contact</h3>
-            <ul class="contact-list">
-              <li><i class="fa fa-phone"></i> +918121009079</li>
-              <li><i class="fa fa-phone"></i> +918121009037</li>
-              <li><i class="fa fa-envelope-o"></i> gsstudio designconsultants@gmail.com</li>
-              <li><i class="fa fa-envelope-o"></i> sreekantharchitect@gmail.com</li>
-            </ul>
-          </div>
-          
-          <div class="social-icons-contact">
-            <a href="#" class="social-btn"><i class="fa fa-facebook-f"></i></a>
-            <a href="#" class="social-btn"><i class="fa fa-instagram"></i></a>
-            <a href="#" class="social-btn"><i class="fa fa-linkedin"></i></a>
-            <a href="#" class="social-btn"><i class="fa fa-youtube-play"></i></a>
-          </div>
+  <main class="h-header-clear">
+    <section>
+        <div class="l-standard-container">
+            <div class="b-contact-panel">
+                <div class="b-contact-panel__details">
+                    <header class="b-contact-panel__header">
+                        <h1 class="e-heading-1">Contact Us</h1>
+                        <p class="b-contact-panel__intro">We'd love to hear from you! Please fill out the form or send us a detailed message directly. Your feedback is important to us, and we look forward to hearing from you!</p>
+                    </header>
+                    <div class="b-contact-panel__info-blocks">
+                        <div class="b-contact-panel__info-block">
+                            <h6 class="b-contact-panel__heading">Address.</h6>
+                            <p class="b-contact-panel__info">
+                                3f-04, It Heights, Main Road<br>
+                                opposite Delhi Public School<br>
+                                Madhura Nagar Colony, Gachibowli<br>
+                                Khajaguda, Hyderabad<br>
+                                Telangana 500032
+                            </p>
+                        </div>
+                        <div class="b-contact-panel__info-block">
+                            <h6 class="b-contact-panel__heading">Contact.</h6>
+                            <p class="b-contact-panel__info">
+                                <a href="tel:+918121009079" title="Telephone Us">+91 81210 09079</a><br>
+                                <a href="tel:+918121009037" title="Telephone Us">+91 81210 09037</a><br>
+                                <a href="mailto:gsstudiodesignconsultants@gmail.com" title="Email Us">gsstudiodesignconsultants@gmail.com</a><br>
+                                <a href="mailto:sreekantharchitect@gmail.com" title="Email Us">sreekantharchitect@gmail.com</a>
+                            </p>
+                        </div>
+                        <div class="b-contact-panel__info-block">
+                            <h6 class="b-contact-panel__heading">Social media.</h6>
+                            <ul class="b-contact-panel__social">
+                                <li class="b-contact-panel__social-item">
+                                    <a href="https://www.facebook.com/ar.sreekanth.g?mibextid=LQQJ4d" target="_blank" rel="nofollow noopener" class="b-contact-panel__social-link" title="Facebook"><i class="fa fa-facebook-f"></i></a>
+                                </li>
+                                <li class="b-contact-panel__social-item">
+                                    <a href="https://www.instagram.com/gsstudiodesignconsultants/?igshid=OGQ5ZDc2ODk2ZA%3D%3D" target="_blank" rel="nofollow noopener" class="b-contact-panel__social-link" title="Instagram"><i class="fa fa-instagram"></i></a>
+                                </li>
+                                <li class="b-contact-panel__social-item">
+                                    <a href="https://in.linkedin.com/company/gs-studio-design-consultants" target="_blank" rel="nofollow noopener" class="b-contact-panel__social-link" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                                </li>
+                                <li class="b-contact-panel__social-item">
+                                    <a href="https://www.youtube.com/channel/UCon701QV0RJjlMtNV1uX0FQ" target="_blank" rel="nofollow noopener" class="b-contact-panel__social-link" title="YouTube"><i class="fa fa-youtube-play"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="b-contact-panel__map-container">
+                    <iframe class="b-contact-panel__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.8451149421035!2d78.36953727591094!3d17.419219101885794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb976ce9854ce7%3A0x3ccfe86bf521758b!2sGS%20STUDIO%20DESIGN%20CONSULTANTS!5e0!3m2!1sen!2sin!4v1730204245733!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            
+            <div class="l-contact-form l-section-space-top">
+                <div class="l-contact-form__form contact-action-btns">
+                    <button class="e-btn-submit" data-bs-toggle="modal" data-bs-target="#contactModal">
+                        Enquiry
+                        <svg width="24" height="13" viewBox="0 0 24 13" fill="currentColor">
+                            <path d="M16.89,5.46a.54.54,0,0,0-.49.36.53.53,0,0,0,.15.59l5.5,5.05H.52a.55.55,0,1,0,0,1.09H22.05l-5.5,5a.55.55,0,0,0-.18.38.52.52,0,0,0,.14.39.55.55,0,0,0,.38.18.52.52,0,0,0,.39-.14l6.54-6A.58.58,0,0,0,24,12a.55.55,0,0,0-.18-.4l-6.54-6a.54.54,0,0,0-.39-.14Z" transform="translate(0 -5.46)"/>
+                        </svg>
+                    </button>
+                    <button class="e-btn-submit" data-bs-toggle="modal" data-bs-target="#careerModal">
+                        Career
+                        <svg width="24" height="13" viewBox="0 0 24 13" fill="currentColor">
+                            <path d="M16.89,5.46a.54.54,0,0,0-.49.36.53.53,0,0,0,.15.59l5.5,5.05H.52a.55.55,0,1,0,0,1.09H22.05l-5.5,5a.55.55,0,0,0-.18.38.52.52,0,0,0,.14.39.55.55,0,0,0,.38.18.52.52,0,0,0,.39-.14l6.54-6A.58.58,0,0,0,24,12a.55.55,0,0,0-.18-.4l-6.54-6a.54.54,0,0,0-.39-.14Z" transform="translate(0 -5.46)"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </div>
-        
-        <div class="contact-map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m2!1s0x3bcb93551d02c0fb%3A0xcf958f2cc812dfb4!2sGS%20STUDIO%20DESIGN%20CONSULTANTS!5e0!3m2!1sen!2sin!4v1713437596000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
     </section>
   </main>
 
@@ -123,6 +353,296 @@
   </footer>
 
   <script src="script.js"></script>
+
+  <!-- Contact Form Modal -->
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="contactModalLabel">Enquiry Form</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <input type="hidden" name="csrfmiddlewaretoken" value="OcR0SGMcbPc267jXOkT6Kd8GrAGmKgMl1sDoL4QgFX33NbXhJiXfBNlF4DxeRBCi">
+                  <!-- Contact Form elements -->
+                  <div class="row">
+                      <div class="col-md-6 form-group">
+                          <input name="name" type="text" id="fullname" placeholder="Your Full Name *" required="">
+                          <span style="color: rgb(255, 0, 0); display: none;" id="name_c">Please fill the Full Name</span> 
+                      </div>
+                      <div class="col-md-6 form-group">
+                          <input name="email" type="email" id="emailid" placeholder="Your Email ID *" required="">
+                          <span style="color: rgb(255, 0, 0); display: none;" id="email_c">Please fill the email</span>
+                      </div>
+                      <div class="col-md-6 form-group">
+                          <input name="phone" type="text" id="mobilenumber" placeholder="Your Mobile Number *" required="">
+                          <span style="color: rgb(255, 0, 0); display: none;" id="phone_c">Please fill the phone</span>
+                      </div>
+                      <div class="col-md-6 form-group">
+                          <input name="subject" type="text" id="subjects" placeholder="Subject *" required="">
+                          <span style="color: rgb(255, 0, 0); display: none;" id="subject_c">Please fill the subject</span>
+                      </div>
+                      <div class="col-md-12 form-group">
+                          <textarea name="message" id="message" cols="30" rows="3" placeholder="Your Message *" required=""></textarea>
+                          <div id="message_error" class="error-message"></div>
+                      </div>
+                      <!--recaptcha-->
+                      <div id="RecaptchaField1" data-callback="validateAndSubmitForm()" data-size="invisible"></div>
+                      <div id="captcha-error-message" style="color: red;"></div>
+                      <!--Contact Submit Button-->
+                      <div class="col-md-12">
+                          <button type="submit" onclick="validateAndSubmitForm()">Send Message</button>
+                      </div>
+                  </div>
+                </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Career Form Modal -->
+  <div class="modal fade" id="careerModal" tabindex="-1" aria-labelledby="careerModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="careerModalLabel">Career Form</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <input type="hidden" name="csrfmiddlewaretoken" value="OcR0SGMcbPc267jXOkT6Kd8GrAGmKgMl1sDoL4QgFX33NbXhJiXfBNlF4DxeRBCi">
+                  <!-- Career Form elements -->
+                  <div class="row">
+                      <div class="col-md-6 form-group">
+                          <input name="cfullname" type="text" id="cfullname" placeholder="Your Full Name *" required="">
+                          <span style="color: rgb(255, 0, 0); display: none;" id="efullname_e">Please fill the Full Name</span>
+                      </div>
+                      <div class="col-md-6 form-group">
+                          <input name="cemailid" type="email" id="cemailid" placeholder="Your Email ID *" required="">
+                          <span style="color: rgb(255, 0, 0); display: none;" id="efullname_email">Please fill the Email</span>
+                      </div>
+                      <div class="col-md-6 form-group">
+                          <input name="cmobilenumber" type="text" id="cmobilenumber" placeholder="Your Mobile Number *" required="">
+                          <span style="color: rgb(255, 0, 0); display: none;" id="efullname_number">Please fill the Number</span>
+                      </div>
+                      <div class="col-md-6 form-group">
+                          <input name="cdesignation" type="text" id="cdesignation" placeholder="Designation" required="">
+                          <span style="color: rgb(255, 0, 0); display: none;" id="efullname_des">Please fill the Designation</span>
+                      </div>
+                      <div class="col-md-6 form-group">
+                          <span style="font-weight: 400;padding-left: 10px;font-family: sans-serif;font-size: 0.9rem;">Resume (PDF)</span>
+                          <input name="cresume" type="file" accept=".pdf" id="cresume" placeholder="Resume (PDF Format)" onchange="validateResume()">
+                          <span style="color: rgb(255, 0, 0); display: none;" id="efullname_res">Please Upload the Resume</span>
+                      </div>
+                      <div class="col-md-6 form-group">
+                          <span style="font-weight: 400;padding-left: 10px;font-family: sans-serif;font-size: 0.9rem;">Portfolio (PDF)</span>
+                          <input name="cportfolio" type="file" accept=".pdf" id="cportfolio" placeholder="Portfolio (PDF Format)" onchange="validateFile()">
+                          <span style="color: rgb(255, 0, 0); display: none;" id="efullname_cp">Please Upload the Portfolio</span>
+                      </div>
+                      <div class="col-md-12 form-group">
+                          <input name="cportfoliourl" type="text" id="cportfoliourl" placeholder="Portfolio URL *" required="">
+                          <span style="color: rgb(255, 0, 0); display: none;" id="cportfoliourls">Please fill the Portfolio Url</span>
+                      </div>
+                      <div class="col-md-12 form-group">
+                          <textarea name="cmessage" id="cmessage" cols="30" rows="2" placeholder="Your Message *" required=""></textarea>
+                          <span style="color: rgb(255, 0, 0); display: none;" id="error-message">objective</span>
+                      </div>
+                      <div class="col-md-12">
+                          <div id="RecaptchaField2" data-callback="CareerForm()" data-size="invisible"></div>
+                          <div id="captcha-error-message1" style="color: red;"></div>
+                      </div>
+                      <div class="col-md-12">
+                          <button type="submit" onclick="CareerForm()">Submit</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit" async defer></script>
+  
+  <script>
+      var CaptchaCallback = function() {
+          if (document.getElementById('RecaptchaField1')) {
+            grecaptcha.render('RecaptchaField1', {
+                'sitekey': '6LdQ4awqAAAAAJcv-Y9te4V9zasrZizogHjivnnW'
+            });
+          }
+          if (document.getElementById('RecaptchaField2')) {
+            grecaptcha.render('RecaptchaField2', {
+                'sitekey': '6LdQ4awqAAAAAJcv-Y9te4V9zasrZizogHjivnnW'
+            });
+          }
+      };
+
+      document.getElementById('cportfolio').addEventListener('change', function () {
+          const fileInput = this;
+          const urlInput = document.getElementById('cportfoliourl');
+          if (fileInput.files.length > 0) {
+              urlInput.removeAttribute('required');
+              urlInput.placeholder = "Portfolio URL Not Required";
+              $('#cportfoliourls').hide();
+          } else {
+              urlInput.setAttribute('required', 'required');
+              urlInput.placeholder = "Portfolio URL (Optional)";
+          }
+      });
+
+      function validateFile() {
+          var fileInput = document.getElementById('cportfolio');
+          var filePath = fileInput.value;
+          var allowedExtensions = /(\.pdf)$/i;
+          if (filePath && !allowedExtensions.exec(filePath)) {
+              alert('Only PDF files are allowed.');
+              fileInput.value = '';
+              return false;
+          }
+          return true;
+      }
+
+      function validateResume() {
+          var fileInputs = document.getElementById('cresume');
+          var filePaths = fileInputs.value;
+          var allowedExtensionss = /(\.pdf)$/i;
+          if (filePaths && !allowedExtensionss.exec(filePaths)) {
+              alert('Only PDF files are allowed.');
+              fileInputs.value = '';
+              return false;
+          }
+          return true;
+      }
+
+      var toastr_function = function(type, message_to) {
+          toastr.options = {
+              "closeButton": false,
+              "positionClass": "toast-top-center",
+              "showDuration": "300",
+              "hideDuration": "1000",
+              "timeOut": "5000",
+          };
+          Command: toastr[type](message_to);
+      };
+
+      function validateAndSubmitForm() {
+          if (!validateContactForm()) return false;
+          sendContactMail();
+          return true;
+      }
+
+      function validateContactForm() {
+          let isValid = true;
+          const fullname = document.getElementById('fullname').value.trim();
+          const emailid = document.getElementById('emailid').value.trim();
+          const mobilenumber = document.getElementById('mobilenumber').value.trim();
+          const subjects = document.getElementById('subjects').value.trim();
+          const message = document.getElementById('message').value.trim();
+
+          if (!fullname) { $('#name_c').show(); isValid = false; } else { $('#name_c').hide(); }
+          if (!emailid) { $('#email_c').show(); isValid = false; } else if (!validateEmail(emailid)) { $('#email_c').hide(); }
+          if (!mobilenumber) { $('#phone_c').show(); isValid = false; } else if (!/^\d{10}$/.test(mobilenumber)){ $('#phone_c').hide(); }
+          if (!subjects) { $('#subject_c').show(); isValid = false; } else { $('#subject_c').hide(); }
+          
+          return isValid;
+      }
+
+      function validateEmail(email) {
+          const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+          return re.test(email);
+      }
+
+      function sendContactMail() {
+          var data = {
+              "fullname": document.getElementById("fullname").value,
+              "emailid": document.getElementById('emailid').value,
+              "mobilenumber": document.getElementById('mobilenumber').value,
+              "subjects": document.getElementById('subjects').value,
+              "message": document.getElementById("message").value,
+              "recaptcha_response": document.getElementById("g-recaptcha-response") ? document.getElementById("g-recaptcha-response").value : "",
+              'csrfmiddlewaretoken': document.querySelector('[name=csrfmiddlewaretoken]').value
+          };
+
+          $.ajax({
+              type: 'POST',
+              url: 'send_email/',
+              data: data,
+              success: function(response) {
+                  if (response['result']) {
+                      toastr_function('success', response['result']);
+                      setTimeout(function() { window.location.reload(true); }, 4000);
+                  } else {
+                      toastr_function('error', response['result']);
+                      setTimeout(function() { window.location.reload(true); }, 4000);
+                  }
+              },
+              error: function(xhr, status, error) {
+                  toastr_function('error', 'An error occurred: ' + error);
+              }
+          });
+      }
+
+      function CareerForm() {
+          if (!validateFormc()) return false;
+          sendMailc();
+          return true;
+      }
+
+      function validateFormc() {
+          let isValid = true;
+          const cfullname = document.getElementById('cfullname').value.trim();
+          const cemailid = document.getElementById('cemailid').value.trim();
+          const cmobilenumber = document.getElementById('cmobilenumber').value.trim();
+          const cdesignation = document.getElementById('cdesignation').value.trim();
+          const cportfoliourl = document.getElementById('cportfoliourl').value.trim();
+          
+          if (!cfullname) { $('#efullname_e').show(); isValid = false; } else { $('#efullname_e').hide(); }
+          if (!cemailid) { $('#efullname_email').show(); isValid = false; } else { $('#efullname_email').hide(); }
+          if (!cmobilenumber) { $('#efullname_number').show(); isValid = false; } else { $('#efullname_number').hide(); }
+          if (!cdesignation) { $('#efullname_des').show(); isValid = false; } else { $('#efullname_des').hide(); }
+          
+          if (!cportfoliourl && $('#cportfoliourl').attr('placeholder') !== "Portfolio URL Not Required") {
+              $('#cportfoliourls').show(); isValid = false;
+          } else {
+              $('#cportfoliourls').hide();
+          }
+          return isValid;
+      }
+
+      function sendMailc() {
+          var formData = new FormData();
+          formData.append('cfullname', document.getElementById("cfullname").value);
+          formData.append('cemailid', document.getElementById('cemailid').value);
+          formData.append('cmobilenumber', document.getElementById('cmobilenumber').value);
+          formData.append('cdesignation', document.getElementById("cdesignation").value);
+          formData.append('cportfoliourl', document.getElementById("cportfoliourl").value);          
+          formData.append('cresume', document.getElementById("cresume").files[0]); 
+          formData.append('cportfolio', document.getElementById("cportfolio").files[0]);
+          formData.append('cmessage', document.getElementById("cmessage").value); 
+          formData.append('recaptcha_response', document.getElementById("g-recaptcha-response-1") ? document.getElementById("g-recaptcha-response-1").value : "");
+          formData.append('csrfmiddlewaretoken', document.querySelector('[name=csrfmiddlewaretoken]').value);
+
+          $.ajax({
+              type: 'POST',
+              url: 'send_career/',
+              data: formData,
+              processData: false,
+              contentType: false,
+              success: function(response) {
+                  if (response['result']) {
+                      toastr_function('success', response['result']);
+                      setTimeout(function() { window.location.reload(true); }, 4000);
+                  } else {
+                      toastr_function('error', response['result']);
+                      setTimeout(function() { window.location.reload(true); }, 4000);
+                  }
+              },
+              error: function(xhr, status, error) {
+                  toastr_function('error', 'An error occurred: ' + error);
+              }
+          });
+      }
+  </script>
 </body>
 
 </html>
